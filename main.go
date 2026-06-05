@@ -64,7 +64,7 @@ func NotesHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		newnote.ID = len(meow) + 1
 		meow = append(meow, newnote)
-		date, errr := json.MarshalIndent(&meow, "", " ")
+		date, errr := json.MarshalIndent(meow, "", " ")
 		if errr != nil {
 			fmt.Println("Error in marshalling the data into a json")
 		}
